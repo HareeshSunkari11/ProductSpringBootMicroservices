@@ -1,0 +1,24 @@
+package com.cts.product.cart.entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+public class CartItemLine {
+	
+	@Id
+	@GeneratedValue
+	private int cartItemId;
+	
+	@ManyToOne
+	@JoinColumn(name = "itemId")
+	private Cart cart;
+	
+	private int quantity;
+	
+	@ManyToOne
+	@JoinColumn(name = "id")
+	private Product product;
+
+}

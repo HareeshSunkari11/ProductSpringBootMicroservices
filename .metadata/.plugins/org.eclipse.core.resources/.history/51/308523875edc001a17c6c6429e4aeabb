@@ -1,0 +1,15 @@
+package com.cts.product.catalog.service;
+
+import java.util.List;
+
+import com.cts.product.catalog.entity.Product;
+
+public class ProductServiceImpl implements ProductService{
+
+	@Override
+	public List<Product> findAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

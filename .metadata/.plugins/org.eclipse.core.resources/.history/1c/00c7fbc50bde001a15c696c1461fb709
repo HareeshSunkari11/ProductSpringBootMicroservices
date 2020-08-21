@@ -1,0 +1,23 @@
+package com.cts.product.catalog.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cts.product.catalog.dao.ReviewDao;
+import com.cts.product.catalog.entity.Review;
+
+@Service
+public class ReviewServiceImpl implements ReviewService{
+
+	@Autowired
+	private ReviewDao reviewDao;
+	
+	
+	@Override
+	public Review findById(int reviewId) {
+		return reviewDao.findById(reviewId).get();
+	}
+
+}

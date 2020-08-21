@@ -1,0 +1,11 @@
+package com.cts.cart.services;
+
+public interface CartItemService {
+	
+	void addCartItem(CartItem cartItem);
+	
+	void removeCartItem(CartItem cartItem);
+	
+	void removeAllCartItems(Cart cart);
+
+}

@@ -1,0 +1,60 @@
+package com.cts.product.price.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+import org.hibernate.annotations.DynamicUpdate;
+
+@Entity
+@DynamicUpdate
+public class Price {
+	
+	@Id
+	@GeneratedValue
+	private int priceId;
+	private double price;
+	private String currency;
+	
+	public Price() {
+		super();
+	}
+
+	public Price(double price, String currency) {
+		super();
+		this.price = price;
+		this.currency = currency;
+	}
+
+	public int getPriceId() {
+		return priceId;
+	}
+
+	public void setPriceId(int priceId) {
+		this.priceId = priceId;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	@Override
+	public String toString() {
+		return "Price [priceId=" + priceId + ", price=" + price + ", currency=" + currency + "]";
+	}
+	
+	
+	
+}

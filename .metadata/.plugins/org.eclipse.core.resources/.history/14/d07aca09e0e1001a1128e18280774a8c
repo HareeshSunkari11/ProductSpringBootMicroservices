@@ -1,0 +1,15 @@
+package com.cts.product.cart.entity;
+
+
+
+public class CartItemLine {
+	
+	
+	private int cartItemId;
+	
+	private Cart cart;
+	
+	private int quantity;
+	
+
+}

@@ -1,0 +1,3 @@
+spring.redis.url=redis://9f602b8c77c642978c190a2fe7a5f8d6@us1-liberal-herring-30714.lambda.store:30714
+
+server.port=8083

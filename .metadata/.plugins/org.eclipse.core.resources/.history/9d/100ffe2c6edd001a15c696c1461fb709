@@ -1,0 +1,5 @@
+package com.cts.product.catalog.dao;
+
+public interface ReviewDao {
+
+}

@@ -1,0 +1,10 @@
+package com.cts.cart.services;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="product-catalog-service",url="http://localhost:8081/api")
+public interface ProductCatalogServiceProxy {
+	
+	
+
+}

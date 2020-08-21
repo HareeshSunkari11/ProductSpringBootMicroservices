@@ -1,0 +1,9 @@
+package com.cts.product.catalog.service;
+
+import com.cts.product.catalog.entity.Review;
+
+public interface ReviewService {
+	
+	Review findById(int reviewId);
+
+}

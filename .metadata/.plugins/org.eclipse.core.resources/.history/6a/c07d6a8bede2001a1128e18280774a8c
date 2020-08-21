@@ -1,0 +1,18 @@
+package com.cts.cart.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
+public class CartItem implements Serializable {
+
+	@Id
+	@GeneratedValue
+	private int cartItemId;
+	@JoinColumn(name = "cartId")
+	private Cart cart;
+	private int quantity;
+	private double totalPrice;
+}

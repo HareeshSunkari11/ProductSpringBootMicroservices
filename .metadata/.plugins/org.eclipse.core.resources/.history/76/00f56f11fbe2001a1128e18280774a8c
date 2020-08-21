@@ -1,0 +1,9 @@
+package com.cts.cart.dao;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@
+public class CartRestController {
+
+}

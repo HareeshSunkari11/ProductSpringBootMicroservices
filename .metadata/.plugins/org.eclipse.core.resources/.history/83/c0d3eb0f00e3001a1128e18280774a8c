@@ -1,0 +1,21 @@
+package com.cts.cart.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
+public class Customer {
+	
+	@Id
+	@GeneratedValue
+	private int customerId;
+	private String customerName;
+	
+	@OneToOne
+	@JoinColumn(name = "cartId")
+	private Cart cart;
+
+}

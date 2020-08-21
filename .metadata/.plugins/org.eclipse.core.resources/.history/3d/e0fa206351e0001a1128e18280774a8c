@@ -1,0 +1,5 @@
+package com.cts.product.price.dao;
+
+public interface ProductDao {
+
+}

@@ -1,0 +1,28 @@
+package com.cts.product.cart.entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+public class Item implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private int cartId;
+	
+	private String name;
+	private double totalPrice;
+	
+	@OneToMany(mappedBy= "item", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<CartItemLine> cartItems;
+	
+	
+
+}

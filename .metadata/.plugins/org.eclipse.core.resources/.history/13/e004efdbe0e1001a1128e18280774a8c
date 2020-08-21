@@ -1,0 +1,71 @@
+package com.cts.product.cart.entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+
+public class Cart implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	
+	private int cartId;
+	private String name;
+	private double totalPrice;
+	
+	//@OneToMany(mappedBy= "cart", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<CartItemLine> cartItems;
+
+	public Cart() {
+		super();
+	}
+
+	public Cart(int cartId, String name, double totalPrice, List<CartItemLine> cartItems) {
+		super();
+		this.cartId = cartId;
+		this.name = name;
+		this.totalPrice = totalPrice;
+		this.cartItems = cartItems;
+	}
+
+	public int getCartId() {
+		return cartId;
+	}
+
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public List<CartItemLine> getCartItems() {
+		return cartItems;
+	}
+
+	public void setCartItems(List<CartItemLine> cartItems) {
+		this.cartItems = cartItems;
+	}
+
+	@Override
+	public String toString() {
+		return "Cart [cartId=" + cartId + ", name=" + name + ", totalPrice=" + totalPrice + ", cartItems=" + cartItems
+				+ "]";
+	}
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.cts.cart.services;
+
+public interface CartServiceProxy {
+
+}

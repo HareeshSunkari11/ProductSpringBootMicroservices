@@ -1,0 +1,23 @@
+package com.cts.product.cart.entity;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+public class Product {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	private String name;
+	private double price;
+	private String description;
+	
+	@OneToMany(mappedBy = "product", cascade =CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<CartItemLine> cartItemLineList;
+
+}

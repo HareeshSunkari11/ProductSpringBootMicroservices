@@ -1,0 +1,14 @@
+package com.cts.product.cart.entity;
+
+import java.io.Serializable;
+
+public class CartItemLine implements Serializable{
+	
+	
+	private static final long serialVersionUID = 1L;
+	
+	private Cart cart;
+	private int quantity;
+	
+
+}

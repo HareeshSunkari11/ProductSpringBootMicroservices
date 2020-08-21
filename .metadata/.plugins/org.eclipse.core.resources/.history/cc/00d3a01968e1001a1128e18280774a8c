@@ -1,0 +1,9 @@
+package com.cts.product.cart.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cts.product.cart.entity.Cart;
+
+public interface CartDao extends JpaRepository<Cart, Integer>{
+
+}

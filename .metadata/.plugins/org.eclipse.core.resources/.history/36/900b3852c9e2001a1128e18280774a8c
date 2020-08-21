@@ -1,0 +1,6 @@
+
+#spring.cloud.config.uri=http://localhost:8888 
+#spring.application.name=cart-service
+
+spring.redis.url=redis://85d44301f5bc4faa95ec99c3d59cdca6@us1-modest-imp-30876.lambda.store:30876
+server.port=8083

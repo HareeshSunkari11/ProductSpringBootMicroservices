@@ -1,0 +1,16 @@
+package com.cts.cart;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public interface User {
+	
+	@Id
+	@GeneratedValue
+	private int userId;
+	private String username;
+	private String password;
+
+}

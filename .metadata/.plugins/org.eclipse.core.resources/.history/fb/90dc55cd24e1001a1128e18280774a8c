@@ -1,0 +1,21 @@
+package com.cts.product.cart.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class Item implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue
+	private int cartId;
+	
+	private String name;
+	private double price;
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package com.cts.cart.services;
+
+import com.cts.cart.entity.Cart;
+
+public interface CartServices {
+	
+	void update(Cart cart) ;
+
+}

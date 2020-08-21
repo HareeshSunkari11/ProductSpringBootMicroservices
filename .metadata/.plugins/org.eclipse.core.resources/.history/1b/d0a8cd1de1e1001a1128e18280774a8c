@@ -1,0 +1,13 @@
+package com.cts.product.cart.dao;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.cts.product.cart.entity.Cart;
+
+@Repository
+public interface CartDao{
+	
+}

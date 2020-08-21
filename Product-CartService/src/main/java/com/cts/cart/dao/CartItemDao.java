@@ -1,0 +1,12 @@
+package com.cts.cart.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cts.cart.entity.CartItem;
+
+public interface CartItemDao extends JpaRepository<CartItem, Integer>{
+	
+	CartItem findCartItemByProductId(int id);
+	
+
+}

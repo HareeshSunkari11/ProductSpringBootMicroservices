@@ -1,0 +1,21 @@
+package com.cts.product.catalog.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cts.product.catalog.dao.ProductDao;
+import com.cts.product.catalog.entity.Product;
+
+public class ProductServiceImpl implements ProductService{
+	
+	@Autowired
+	private ProductDao productDao;
+
+	@Override
+	public List<Product> findAllProducts() {
+		// TODO Auto-generated method stub
+		return productDao.findAll();
+	}
+
+}

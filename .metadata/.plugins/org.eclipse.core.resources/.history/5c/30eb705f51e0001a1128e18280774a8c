@@ -1,0 +1,9 @@
+package com.cts.product.price.service;
+
+import com.cts.product.price.entity.Price;
+
+public interface PriceService {
+	
+	public Price getPriceById(int id);
+
+}

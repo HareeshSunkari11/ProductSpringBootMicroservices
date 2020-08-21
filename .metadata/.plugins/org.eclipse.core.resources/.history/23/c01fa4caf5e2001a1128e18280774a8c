@@ -1,0 +1,15 @@
+package com.cts.cart.services;
+
+import java.util.List;
+
+import com.cts.cart.entity.Cart;
+
+public interface CartServices {
+	
+	Cart findById(int id);
+    List<Cart> saveProducts(List<Cart> products);
+	Cart saveproduct(Cart product);
+	void deleteCartById(int id);
+	void update(Cart cart) ;
+
+}

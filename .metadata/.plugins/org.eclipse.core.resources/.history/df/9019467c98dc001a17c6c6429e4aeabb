@@ -1,0 +1,26 @@
+package com.cts.product.catalog.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Review {
+	
+	@Id
+	@GeneratedValue
+	private int reviewId;
+	private int stars;
+	private String author;
+	private String body;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "id")
+	private Product product;
+	
+	
+
+}

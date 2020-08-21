@@ -1,0 +1,3 @@
+spring.redis.url=redis://81c2ca3eefcb4511bb94d4ebd6ffacc2@us1-bright-eel-30864.lambda.store:30864
+
+server.port=8083

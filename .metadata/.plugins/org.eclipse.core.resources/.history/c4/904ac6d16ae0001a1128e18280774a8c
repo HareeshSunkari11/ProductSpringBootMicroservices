@@ -1,0 +1,8 @@
+package com.cts.product.price.service;
+
+
+public interface PriceService {
+	
+	public double getPriceById(int id);
+
+}
