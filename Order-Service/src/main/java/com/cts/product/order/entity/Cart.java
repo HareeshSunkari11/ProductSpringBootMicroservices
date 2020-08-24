@@ -1,15 +1,17 @@
-package com.cts.product.cart.entity;
+package com.cts.product.order.entity;
 
 import java.io.Serializable;
-import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 
 public class Cart implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	
-	private int cartId;
+	@Id
+	private int id;
 	private String name;
 	private double price;
 	private double itemTotal;
@@ -17,21 +19,20 @@ public class Cart implements Serializable{
 	public Cart() {
 		super();
 	}
-
-	public Cart(int cartId, String name, double price,double itemTotal) {
+	
+	public Cart(int id, String name, double price) {
 		super();
-		this.cartId = cartId;
+		this.id = id;
 		this.name = name;
 		this.price = price;
-		
 	}
 
-	public int getCartId() {
-		return cartId;
+	public int getId() {
+		return id;
 	}
 
-	public void setCartId(int cartId) {
-		this.cartId = cartId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -57,6 +58,6 @@ public class Cart implements Serializable{
 	public void setItemTotal(double itemTotal) {
 		this.itemTotal = itemTotal;
 	}
-
+	
 
 }

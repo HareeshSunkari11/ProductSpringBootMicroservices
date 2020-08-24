@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.ListOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
+import com.cts.product.cart.entity.Cart;
 import com.cts.product.cart.entity.CartItemLine;
 
 @Repository
@@ -18,6 +19,7 @@ public class CartDaoImpl {
 	private static final String KEY = "CartItemLine";
 	@Autowired
 	private RedisTemplate<String, String> template;
+	Cart cart = null;
 	
 	 private HashOperations<String, Long,CartItemLine> hashOperations;
 	// inject the template as ListOperations
@@ -27,6 +29,8 @@ public class CartDaoImpl {
 	private ListOperations<String, CartItemLine> listOps;
 	
 	public CartItemLine save(String user, CartItemLine cartItemLine) {
+		
+		//cartItemLine.setTotalPrise(cart.getPrice()*cartItemLine.getQuantity());
 		listOps.leftPush(user, cartItemLine);
 		return cartItemLine;
 	}

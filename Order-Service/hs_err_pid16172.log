@@ -1,0 +1,174 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=16172, tid=17548
+#
+# JRE version:  (8.0_73-b02) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.73-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000390c800):  JavaThread "Unknown thread" [_thread_in_vm, id=17548, stack(0x0000000003800000,0x0000000003900000)]
+
+Stack: [0x0000000003800000,0x0000000003900000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000390c800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=17548, stack(0x0000000003800000,0x0000000003900000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 28672K, used 491K [0x00000000e0580000, 0x00000000e2580000, 0x0000000100000000)
+  eden space 24576K, 2% used [0x00000000e0580000,0x00000000e05fae20,0x00000000e1d80000)
+  from space 4096K, 0% used [0x00000000e2180000,0x00000000e2180000,0x00000000e2580000)
+  to   space 4096K, 0% used [0x00000000e1d80000,0x00000000e1d80000,0x00000000e2180000)
+ ParOldGen       total 65536K, used 0K [0x00000000a1000000, 0x00000000a5000000, 0x00000000e0580000)
+  object space 65536K, 0% used [0x00000000a1000000,0x00000000a1000000,0x00000000a5000000)
+ Metaspace       used 769K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 75K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012dc0000,0x00000000130c0000] byte_map_base: 0x00000000128b8000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005ccf0600
+ Begin Bits: [0x0000000013ac0000, 0x0000000015280000)
+ End Bits:   [0x0000000015280000, 0x0000000016a40000)
+
+Polling page: 0x0000000003710000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x0000000003a00000, 0x0000000003c70000, 0x0000000012a00000]
+ total_blobs=56 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.099 loading class java/lang/Short
+Event: 0.100 loading class java/lang/Short done
+Event: 0.100 loading class java/lang/Integer
+Event: 0.100 loading class java/lang/Integer done
+Event: 0.100 loading class java/lang/Long
+Event: 0.101 loading class java/lang/Long done
+Event: 0.102 loading class java/lang/NullPointerException
+Event: 0.103 loading class java/lang/NullPointerException done
+Event: 0.103 loading class java/lang/ArithmeticException
+Event: 0.103 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff71b560000 - 0x00007ff71b597000 	C:\Program Files\Java\jdk1.8.0_73\bin\javaw.exe
+0x00007ffe53880000 - 0x00007ffe53a6d000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffe52b10000 - 0x00007ffe52bc3000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffe4f9b0000 - 0x00007ffe4fc45000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffe4cfb0000 - 0x00007ffe4d03c000 	C:\windows\SYSTEM32\apphelp.dll
+0x00007ffe3b1d0000 - 0x00007ffe3b661000 	C:\windows\SYSTEM32\AcLayers.DLL
+0x00007ffe53360000 - 0x00007ffe533fe000 	C:\windows\System32\msvcrt.dll
+0x00007ffe52f10000 - 0x00007ffe530a7000 	C:\windows\System32\USER32.dll
+0x00007ffe4f990000 - 0x00007ffe4f9b0000 	C:\windows\System32\win32u.dll
+0x00007ffe52a30000 - 0x00007ffe52a59000 	C:\windows\System32\GDI32.dll
+0x00007ffe50800000 - 0x00007ffe5099b000 	C:\windows\System32\gdi32full.dll
+0x00007ffe4fcd0000 - 0x00007ffe4fd70000 	C:\windows\System32\msvcp_win.dll
+0x00007ffe50500000 - 0x00007ffe505fa000 	C:\windows\System32\ucrtbase.dll
+0x00007ffe535b0000 - 0x00007ffe53602000 	C:\windows\System32\SHLWAPI.dll
+0x00007ffe52be0000 - 0x00007ffe52f0c000 	C:\windows\System32\combase.dll
+0x00007ffe53460000 - 0x00007ffe53582000 	C:\windows\System32\RPCRT4.dll
+0x00007ffe4fc50000 - 0x00007ffe4fcce000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffe530b0000 - 0x00007ffe53153000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffe537b0000 - 0x00007ffe5384e000 	C:\windows\System32\sechost.dll
+0x0000000000fc0000 - 0x0000000000fc3000 	C:\windows\SYSTEM32\sfc.dll
+0x00007ffe48940000 - 0x00007ffe489c9000 	C:\windows\SYSTEM32\WINSPOOL.DRV
+0x00007ffe4f860000 - 0x00007ffe4f871000 	C:\windows\System32\kernel.appcore.dll
+0x00007ffe504d0000 - 0x00007ffe504f6000 	C:\windows\System32\bcrypt.dll
+0x00007ffe4a170000 - 0x00007ffe4a319000 	C:\windows\SYSTEM32\PROPSYS.dll
+0x00007ffe52030000 - 0x00007ffe520f4000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffe52100000 - 0x00007ffe521a9000 	C:\windows\System32\shcore.dll
+0x00007ffe4ede0000 - 0x00007ffe4ee1d000 	C:\windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffe3abf0000 - 0x00007ffe3ac02000 	C:\windows\SYSTEM32\sfc_os.DLL
+0x00007ffe48340000 - 0x00007ffe48351000 	C:\windows\SYSTEM32\SortWindows61.dll
+0x00007ffe53610000 - 0x00007ffe5363e000 	C:\windows\System32\IMM32.DLL
+0x00007ffe34810000 - 0x00007ffe34a89000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.1339_none_de7015e4534c7114\COMCTL32.dll
+0x00007ffe4e3d0000 - 0x00007ffe4e558000 	C:\Program Files\Avecto\Privilege Guard Client\PGHook.dll
+0x00007ffe507e0000 - 0x00007ffe507f7000 	C:\windows\System32\CRYPTSP.dll
+0x00007ffe4e9e0000 - 0x00007ffe4ea13000 	C:\windows\system32\rsaenh.dll
+0x00007ffe4f290000 - 0x00007ffe4f29c000 	C:\windows\SYSTEM32\CRYPTBASE.dll
+0x00007ffe50aa0000 - 0x00007ffe51f98000 	C:\windows\System32\shell32.dll
+0x00007ffe50a50000 - 0x00007ffe50a9a000 	C:\windows\System32\cfgmgr32.dll
+0x00007ffe4fd70000 - 0x00007ffe504c4000 	C:\windows\System32\windows.storage.dll
+0x00007ffe4f8e0000 - 0x00007ffe4f904000 	C:\windows\System32\profapi.dll
+0x00007ffe4f880000 - 0x00007ffe4f8dd000 	C:\windows\System32\powrprof.dll
+0x000000005c290000 - 0x000000005c362000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\msvcr100.dll
+0x000000005c4e0000 - 0x000000005cd70000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\server\jvm.dll
+0x00007ffe52bd0000 - 0x00007ffe52bd8000 	C:\windows\System32\PSAPI.DLL
+0x00007ffe429c0000 - 0x00007ffe429c9000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffe531c0000 - 0x00007ffe5322d000 	C:\windows\System32\WS2_32.dll
+0x00007ffe4ae30000 - 0x00007ffe4ae54000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffe4e820000 - 0x00007ffe4e82a000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffe4ad70000 - 0x00007ffe4ad9d000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x000000005dff0000 - 0x000000005dfff000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\verify.dll
+0x000000005c3d0000 - 0x000000005c3f9000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\java.dll
+0x000000005c3b0000 - 0x000000005c3c6000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56599 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.jmx.enabled=true -Dspring.application.admin.enabled=true -Xverify:none -XX:TieredStopAtLevel=1 -Dspring.boot.project.name=Order-Service -Dfile.encoding=UTF-8 
+java_command: com.cts.product.order.OrderServiceApplication --spring.output.ansi.enabled=always
+java_class_path (initial): C:\Users\602041\Documents\Flightworkspace\Order-Service\target\classes;C:\Users\602041\.m2\repository\org\springframework\cloud\spring-cloud-starter-config\2.2.4.RELEASE\spring-cloud-starter-config-2.2.4.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\cloud\spring-cloud-starter\2.2.4.RELEASE\spring-cloud-starter-2.2.4.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\cloud\spring-cloud-context\2.2.4.RELEASE\spring-cloud-context-2.2.4.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\security\spring-security-crypto\5.3.3.RELEASE\spring-security-crypto-5.3.3.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\cloud\spring-cloud-commons\2.2.4.RELEASE\spring-cloud-commons-2.2.4.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\security\spring-security-rsa\1.0.9.RELEASE\spring-security-rsa-1.0.9.RELEASE.jar;C:\Users\602041\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\602041\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\602041\.m2\repository\org\springframework\cloud\spring-cloud-config-client\2.2.4.RELEASE\spring-cloud-config-client-2.2.4.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.2.RELEASE\spring-boot-autoconfigure-2.3.2.RELEASE.jar;C:\Users\602041\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.1\jackson-annotations-2.11.1.jar;C:\Users\602041\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.1\jackson-databind-2.11.1.jar;C:\Users\602041\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.1\jackson-core-2.11.1.jar;C:\Users\602041\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.3.2.RELEASE\spring-boot-starter-data-jpa-2.3.2.RELEASE.jar;C:\Users\602041\.m2\repository\org\springframework\boot\spring-boot-starter-aop\2.3.2.RELEASE\spring-boot-starter-aop-2.3.2.RELEASE.jar;C:\Users\602041
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk1.8.0_73/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_73/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_73/bin/../jre/lib/amd64;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\Webex\Webex\Applications;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_73\bin;C:\Program Files (x86)\MySQL\MySQL Utilities 1.6\;C:\Users\602041\AppData\Local\Microsoft\WindowsApps;;C:\Users\602041\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\602041\AppData\Roaming\npm;C:\Users\602041\Downloads\sts-4.7.0.RELEASE;
+USERNAME=602041
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17763 (10.0.17763.1339)
+
+CPU:total 8 (8 cores per cpu, 1 threads per core) family 23 model 24 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1
+
+Memory: 4k page, physical 6223164k(294168k free), swap 23000380k(5644k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.73-b02) for windows-amd64 JRE (1.8.0_73-b02), built on Jan 29 2016 17:38:49 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Aug 24 16:57:26 2020
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

@@ -10,6 +10,7 @@ public class CartItemLine implements Serializable{
 	private Cart cart;
 	private int quantity;
 	
+	
 	public CartItemLine() {
 		super();
 	}
@@ -35,6 +36,7 @@ public class CartItemLine implements Serializable{
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	
 
 	@Override
 	public String toString() {

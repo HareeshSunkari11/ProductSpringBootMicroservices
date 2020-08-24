@@ -13,26 +13,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cts.product.cart.dao.CartDaoImpl;
+import com.cts.product.cart.entity.Cart;
 import com.cts.product.cart.entity.CartItemLine;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/cart")
+@RequestMapping("/cart/{user}")
 class CartRestController {
 	
 	@Autowired
 	private CartDaoImpl cartDao;
 	
-	@PostMapping("/{userName}")
-	public CartItemLine displayCartOrders(@RequestBody CartItemLine cartItemLine ,@PathVariable("userName") String user) {
-		
+	@PostMapping
+	public CartItemLine displayCartOrders(@RequestBody CartItemLine cartItemLine ,@PathVariable() String user) {
+		cartItemLine.getCart().setItemTotal(cartItemLine.getQuantity()*cartItemLine.getCart().getPrice());
+		//cartItemLine.setTotalPrice(cart.getPrice() * cartItemLine.getQuantity());
 		cartDao.save(user, cartItemLine);
 		return cartItemLine;
 		
 	}
 	
-	@GetMapping("/{userName}")
-	public List<CartItemLine> getCartItems(@PathVariable("userName") String user) {
+	@GetMapping
+	public List<CartItemLine> getCartItems(@PathVariable String user) {
 		
 		List<CartItemLine> cartItems = cartDao.findAll(user);
 		cartItems.forEach(System.out::println);
@@ -40,8 +42,8 @@ class CartRestController {
 		return cartItems;
 	}
 	
-	@DeleteMapping("/{userName}")
-	public void clearCart(@PathVariable("userName") String user) {
+	@DeleteMapping
+	public void clearCart(@PathVariable String user) {
 
 		cartDao.clear(user);
 		System.out.println(">>>> Cleared....");
